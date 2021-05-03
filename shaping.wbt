@@ -1,0 +1,197 @@
+#VRML_SIM R2021a utf8
+WorldInfo {
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation 0.10516043840136954 0.9667801744982031 0.23297505530089638 3.9385467952135547
+  position -6.780485866320747 4.38746252938808 -5.677334447503224
+}
+Background {
+  skyColor [
+    1 1 1
+  ]
+  luminosity 0
+}
+DEF Floor Shape {
+  appearance Appearance {
+    material Material {
+      diffuseColor 1 0.666667 0.498039
+    }
+  }
+  geometry Box {
+    size 5 0.1 5
+  }
+}
+DirectionalLight {
+  direction 2 -1 0
+  intensity 2
+  castShadows TRUE
+}
+DEF Wall01 Transform {
+  translation 0 0.2 -2.46
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0 1 0
+        }
+      }
+      geometry Box {
+        size 5 0.5 0.1
+      }
+    }
+  ]
+}
+DEF Wall02 Transform {
+  translation 0 0.2 2.44
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0 1 0
+        }
+      }
+      geometry Box {
+        size 5 0.5 0.1
+      }
+    }
+  ]
+}
+DEF Wall03 Transform {
+  translation 2.49 0.2 -0.0100092
+  rotation 0 1 0 1.5708
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0 1 0
+        }
+      }
+      geometry Box {
+        size 5 0.5 0.1
+      }
+    }
+  ]
+}
+DEF Wall04 Transform {
+  translation -2.46 0.2 -0.00999131
+  rotation 0 1 0 1.5708
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0 1 0
+        }
+      }
+      geometry Box {
+        size 5 0.5 0.1
+      }
+    }
+  ]
+}
+DEF Cylinder Transform {
+  translation 0.26 0.23 -0.16
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 1 0 0
+        }
+        texture ImageTexture {
+        }
+        textureTransform TextureTransform {
+        }
+      }
+      geometry Cylinder {
+        height 0.6
+        radius 0.1
+        subdivision 24
+      }
+    }
+  ]
+}
+DEF Sphere Transform {
+  translation 0.26 0.24 0.67
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 1 1 0
+        }
+        texture ImageTexture {
+        }
+        textureTransform TextureTransform {
+        }
+      }
+      geometry Sphere {
+        radius 0.2
+        subdivision 5
+      }
+    }
+  ]
+}
+DEF Cone Transform {
+  translation 0.26 0.24 -1.09
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 1 0 1
+        }
+        texture ImageTexture {
+        }
+        textureTransform TextureTransform {
+        }
+      }
+      geometry Cone {
+        bottomRadius 0.2
+        height 0.4
+        subdivision 20
+      }
+    }
+  ]
+}
+DEF Wheel Transform {
+  children [
+    DEF Wheel01 Transform {
+      translation 0.31 0 1.51
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 1 0.333333 0
+            }
+            texture ImageTexture {
+            }
+            textureTransform TextureTransform {
+            }
+          }
+          geometry Cylinder {
+            height 0.4
+            radius 0.23
+          }
+        }
+      ]
+    }
+    DEF Wheel02 Transform {
+      translation 0.31 0 1.51
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 1 0.333333 0
+            }
+            texture ImageTexture {
+            }
+            textureTransform TextureTransform {
+            }
+          }
+          geometry Cylinder {
+            height 1
+            radius 0.06
+          }
+        }
+      ]
+    }
+  ]
+}

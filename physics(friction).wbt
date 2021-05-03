@@ -1,0 +1,222 @@
+#VRML_SIM R2021a utf8
+WorldInfo {
+  coordinateSystem "NUE"
+  contactProperties [
+    ContactProperties {
+    }
+  ]
+}
+Viewpoint {
+  orientation -0.3744598686217543 0.8911686724859373 0.256121463316589 1.2850595558575673
+  position 9.20045158673398 5.387168099114305 3.551052997142181
+}
+Background {
+  skyColor [
+    1 1 1
+  ]
+  luminosity 0
+}
+DEF FloorSolid Solid {
+  translation 0 0 0.05
+  rotation 1 0 0 -0.261795307179586
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0.666667 0.666667 1
+        }
+        texture ImageTexture {
+        }
+        textureTransform TextureTransform {
+        }
+      }
+      geometry Box {
+        size 5 0.1 5
+      }
+    }
+  ]
+  name "solid(1)"
+  boundingObject DEF Floor Shape {
+    appearance Appearance {
+      material Material {
+        diffuseColor 1 0.666667 0.498039
+      }
+      texture ImageTexture {
+      }
+      textureTransform TextureTransform {
+      }
+    }
+    geometry Box {
+      size 5 0.1 5
+    }
+  }
+}
+DirectionalLight {
+  direction -1 -1 0
+  intensity 6
+  castShadows TRUE
+}
+DEF Wall01 Solid {
+  translation 0 0.2 -2.46
+  children [
+    DEF wall01 Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0 1 0
+        }
+      }
+      geometry Box {
+        size 5 0.5 0.1
+      }
+    }
+  ]
+  boundingObject USE wall01
+}
+DEF Wall02 Solid {
+  translation 0 0.2 2.44
+  children [
+    DEF wall02 Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0 1 0
+        }
+      }
+      geometry Box {
+        size 5 0.5 0.1
+      }
+    }
+  ]
+  boundingObject USE wall02
+}
+DEF Wall03 Solid {
+  translation 2.49 0.2 -0.0100092
+  rotation 0 1 0 1.5708
+  children [
+    DEF wall03 Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0 1 0
+        }
+      }
+      geometry Box {
+        size 5 0.5 0.1
+      }
+    }
+  ]
+  boundingObject USE wall03
+}
+DEF Wall04 Solid {
+  translation -2.46 0.2 -0.00999131
+  rotation 0 1 0 1.5708
+  children [
+    DEF wall04 Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0 1 0
+        }
+      }
+      geometry Box {
+        size 5 0.5 0.1
+      }
+    }
+  ]
+  boundingObject USE wall04
+}
+DEF Cylinder Solid {
+  translation 2.11 0.94 1.51
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 1 0 0
+        }
+        texture ImageTexture {
+        }
+        textureTransform TextureTransform {
+        }
+      }
+      geometry Cylinder {
+        height 0.6
+        radius 0.1
+        subdivision 24
+      }
+    }
+  ]
+  boundingObject Cylinder {
+    height 0.6
+    radius 0.1
+  }
+  physics Physics {
+    density -1
+    mass 1
+  }
+}
+DEF Sphere Solid {
+  translation -1.19 0.234305 -0.18
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 1 1 0
+        }
+        texture ImageTexture {
+        }
+        textureTransform TextureTransform {
+        }
+      }
+      geometry Sphere {
+        radius 0.2
+        subdivision 5
+      }
+    }
+  ]
+  boundingObject Sphere {
+    radius 0.2
+    subdivision 5
+  }
+  physics Physics {
+    density -1
+    mass 2
+  }
+}
+DEF Cone Solid {
+  translation 1.4 0.182046 -0.274472
+  rotation -1 0 0 0.261795
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 1 0 1
+        }
+        texture ImageTexture {
+        }
+        textureTransform TextureTransform {
+        }
+      }
+      geometry Cone {
+        bottomRadius 0.2
+        height 0.4
+        subdivision 20
+      }
+    }
+  ]
+  boundingObject Group {
+    children [
+      DEF Bottom Transform {
+        translation 0 -0.14 0
+        children [
+          Cylinder {
+            height 0.3
+            radius 0.21
+          }
+        ]
+      }
+      DEF Top Transform {
+        translation 0 -0.14 0
+      }
+    ]
+  }
+}
+Pioneer3dx {
+  translation 0 0.8175 2.11
+}

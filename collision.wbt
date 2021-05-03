@@ -1,0 +1,226 @@
+#VRML_SIM R2021a utf8
+WorldInfo {
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation 0.043982980203518984 0.9628830298107222 0.26631141236330935 3.4341751005674563
+  position -2.984910226521026 4.606965239762886 -7.7155789123204706
+}
+Background {
+  skyColor [
+    1 1 1
+  ]
+  luminosity 0
+}
+DEF FloorSolid Solid {
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0.666667 0.666667 1
+        }
+        texture ImageTexture {
+        }
+        textureTransform TextureTransform {
+        }
+      }
+      geometry Box {
+        size 5 0.1 5
+      }
+    }
+  ]
+  name "solid(1)"
+  boundingObject DEF Floor Shape {
+    appearance Appearance {
+      material Material {
+        diffuseColor 1 0.666667 0.498039
+      }
+      texture ImageTexture {
+      }
+      textureTransform TextureTransform {
+      }
+    }
+    geometry Box {
+      size 5 0.1 5
+    }
+  }
+}
+DirectionalLight {
+  direction 2 -1 0
+  intensity 2
+  castShadows TRUE
+}
+DEF Wall01 Solid {
+  translation 0 0.2 -2.46
+  children [
+    DEF wall01 Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0 1 0
+        }
+      }
+      geometry Box {
+        size 5 0.5 0.1
+      }
+    }
+  ]
+  boundingObject USE wall01
+}
+DEF Wall02 Solid {
+  translation 0 0.2 2.44
+  children [
+    DEF wall02 Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0 1 0
+        }
+      }
+      geometry Box {
+        size 5 0.5 0.1
+      }
+    }
+  ]
+  boundingObject USE wall02
+}
+DEF Wall03 Solid {
+  translation 2.49 0.2 -0.0100092
+  rotation 0 1 0 1.5708
+  children [
+    DEF wall03 Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0 1 0
+        }
+      }
+      geometry Box {
+        size 5 0.5 0.1
+      }
+    }
+  ]
+  boundingObject USE wall03
+}
+DEF Wall04 Solid {
+  translation -2.46 0.2 -0.00999131
+  rotation 0 1 0 1.5708
+  children [
+    DEF wall04 Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0 1 0
+        }
+      }
+      geometry Box {
+        size 5 0.5 0.1
+      }
+    }
+  ]
+  boundingObject USE wall04
+}
+DEF Cylinder Solid {
+  translation 1.35 0.23 1.51
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 1 0 0
+        }
+        texture ImageTexture {
+        }
+        textureTransform TextureTransform {
+        }
+      }
+      geometry Cylinder {
+        height 0.6
+        radius 0.1
+        subdivision 24
+      }
+    }
+  ]
+  boundingObject Cylinder {
+    height 0.6
+    radius 0.1
+  }
+}
+DEF Sphere Solid {
+  translation -1.48 0.24 -0.18
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 1 1 0
+        }
+        texture ImageTexture {
+        }
+        textureTransform TextureTransform {
+        }
+      }
+      geometry Sphere {
+        radius 0.2
+        subdivision 5
+      }
+    }
+  ]
+  boundingObject Sphere {
+    radius 0.2
+    subdivision 5
+  }
+}
+DEF Cone Solid {
+  translation 1.4 0.24 -1.59
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 1 0 1
+        }
+        texture ImageTexture {
+        }
+        textureTransform TextureTransform {
+        }
+      }
+      geometry Cone {
+        bottomRadius 0.2
+        height 0.4
+        subdivision 20
+      }
+    }
+  ]
+  boundingObject Group {
+    children [
+      DEF Bottom Transform {
+        translation 0 -0.14 0
+        children [
+          Cylinder {
+            height 0.3
+            radius 0.21
+          }
+        ]
+      }
+      DEF Top Transform {
+        translation 0 -0.14 0
+      }
+    ]
+  }
+}
+Pioneer3dx {
+  hidden position_0_0 -0.033949735780288
+  hidden position_0_1 220.23371958278287
+  hidden position_0_2 202.6404729304374
+  hidden linearVelocity_0 -0.09748454830103488 0.0030300980152717536 -0.5163299506039954
+  hidden angularVelocity_0 -0.08619258476243664 0.001353360986046391 0.01002247231657554
+  hidden rotation_1 0 -0.9999999999999999 0 0.03394973578028386
+  hidden position_1_0 -522.1955780257396
+  hidden linearVelocity_1 -0.10216382938936436 0.015067784592965369 -0.5103048639988726
+  hidden angularVelocity_1 -0.08891402939486294 -1.1336509350038935 -0.033901065716829555
+  hidden rotation_2 1 0 0 5.591987777345699
+  hidden linearVelocity_2 -0.11765974428641482 0.016033051546204137 -0.510036534715918
+  hidden angularVelocity_2 -13.155656399008448 -1.7565395198296976 2.967618251641561
+  hidden rotation_4 1 0 0 5.960951475682245
+  hidden linearVelocity_4 -0.09576196454119826 -0.001182965474979389 -0.5104747830372172
+  hidden angularVelocity_4 -5.235006105207382 -0.029061291803178027 0.9831851021070738
+  hidden rotation_9 -1 0 0 1.57854310069063
+  hidden linearVelocity_9 -0.09781867740362814 -0.0026194911369317275 -0.5102579792297149
+  hidden angularVelocity_9 -5.23412695788786 -0.005566996243580695 0.9879045103808062
+  translation -1.813037784778463 0.14520424366199353 0.9963123685812091
+  rotation 0.17865628582657855 0.9838570452031495 -0.010355971165456179 0.19133269362092178
+}

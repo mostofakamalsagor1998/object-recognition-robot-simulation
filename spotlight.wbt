@@ -1,0 +1,86 @@
+#VRML_SIM R2021a utf8
+WorldInfo {
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation 0.5098826350725796 0.8329274581228703 0.215061730571519 5.318120535185393
+  position -6.337232334013754 5.466070667716218 6.453126705112808
+}
+Background {
+  skyColor [
+    1 1 1
+  ]
+  luminosity 0
+}
+WoodenChair {
+  translation 0.45 0 -0.92
+}
+Floor {
+}
+Panel {
+  translation 2.44 -0.02 1.72
+  rotation 0 -1 0 -3.1415853071795863
+  name "panel(11)"
+}
+Panel {
+  translation 2.38 0 0.47
+  rotation 0 1 0 -1.5707953071795862
+  name "panel(10)"
+}
+Panel {
+  translation 2.38 0 -0.69
+  rotation 0 1 0 -1.5707953071795862
+  name "panel(9)"
+}
+Panel {
+  translation 2.38 0 -1.84
+  rotation 0 1 0 -1.5707953071795862
+  name "panel(8)"
+}
+Panel {
+  translation -2.28026 0 0.68045
+  rotation 0 1 0 1.5708
+  name "panel(7)"
+}
+Panel {
+  translation -2.28026 0 -0.49955
+  rotation 0 1 0 1.5708
+  name "panel(6)"
+}
+Panel {
+  translation -2.28026 0 -1.69955
+  rotation 0 1 0 1.5708
+  name "panel(5)"
+}
+Panel {
+  translation -2.34 0 -2.97
+  name "panel(4)"
+}
+Panel {
+  translation 2.38 0 -3.01
+  rotation 0 1 0 -1.5707953071795862
+  name "panel(3)"
+}
+Panel {
+  translation 1.15 0 -2.97
+  name "panel(2)"
+}
+Panel {
+  translation -1.18 0 -2.97
+  name "panel(1)"
+}
+Panel {
+  translation 0 0 -2.97
+}
+Pioneer2 {
+  translation 1.14847 0 -0.885979
+}
+SpotLight {
+  attenuation 0 0 1
+  beamWidth 1.57
+  color 1 0.666667 0
+  cutOffAngle 1.5707963267948966
+  direction 2 14 -10
+  intensity 5
+  castShadows TRUE
+}
